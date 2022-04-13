@@ -1,0 +1,68 @@
+[0m# docker_container.blockchain_container:
+resource "docker_container" "blockchain_container" {
+    [1m[0mattach[0m[0m            = false
+    [1m[0mcommand[0m[0m           = [
+        "nginx",
+        "-g",
+        "daemon off;",
+    ]
+    [1m[0mcpu_shares[0m[0m        = 0
+    [1m[0mentrypoint[0m[0m        = [
+        "/docker-entrypoint.sh",
+    ]
+    [1m[0menv[0m[0m               = []
+    [1m[0mgateway[0m[0m           = "172.17.0.1"
+    [1m[0mhostname[0m[0m          = "5136d78ecc46"
+    [1m[0mid[0m[0m                = "5136d78ecc46c12bbf3da114a1500849164278563dceebaed1512c9524d64227"
+    [1m[0mimage[0m[0m             = "sha256:4bf6f808735846f318bbf86cf42f6393727c46967ffd4814059ea0617cb8ce56"
+    [1m[0minit[0m[0m              = false
+    [1m[0mip_address[0m[0m        = "172.17.0.2"
+    [1m[0mip_prefix_length[0m[0m  = 16
+    [1m[0mipc_mode[0m[0m          = "private"
+    [1m[0mlog_driver[0m[0m        = "json-file"
+    [1m[0mlogs[0m[0m              = false
+    [1m[0mmax_retry_count[0m[0m   = 0
+    [1m[0mmemory[0m[0m            = 0
+    [1m[0mmemory_swap[0m[0m       = 0
+    [1m[0mmust_run[0m[0m          = true
+    [1m[0mname[0m[0m              = "blockchain"
+    [1m[0mnetwork_data[0m[0m      = [
+        {
+            gateway                   = "172.17.0.1"
+            global_ipv6_address       = ""
+            global_ipv6_prefix_length = 0
+            ip_address                = "172.17.0.2"
+            ip_prefix_length          = 16
+            ipv6_gateway              = ""
+            network_name              = "bridge"
+        },
+    ]
+    [1m[0mnetwork_mode[0m[0m      = "default"
+    [1m[0mprivileged[0m[0m        = false
+    [1m[0mpublish_all_ports[0m[0m = false
+    [1m[0mread_only[0m[0m         = false
+    [1m[0mremove_volumes[0m[0m    = true
+    [1m[0mrestart[0m[0m           = "no"
+    [1m[0mrm[0m[0m                = false
+    [1m[0msecurity_opts[0m[0m     = []
+    [1m[0mshm_size[0m[0m          = 64
+    [1m[0mstart[0m[0m             = true
+    [1m[0mstdin_open[0m[0m        = false
+    [1m[0mtty[0m[0m               = false
+    [1m[0mworking_dir[0m[0m       = "/app"
+
+    ports {
+        [1m[0mexternal[0m[0m = 8080
+        [1m[0minternal[0m[0m = 80
+        [1m[0mip[0m[0m       = "0.0.0.0"
+        [1m[0mprotocol[0m[0m = "tcp"
+    }
+}
+
+# docker_image.blockchain_image:
+resource "docker_image" "blockchain_image" {
+    [1m[0mid[0m[0m          = "sha256:4bf6f808735846f318bbf86cf42f6393727c46967ffd4814059ea0617cb8ce56si3mshady/blockchain_app:1"
+    [1m[0mlatest[0m[0m      = "sha256:4bf6f808735846f318bbf86cf42f6393727c46967ffd4814059ea0617cb8ce56"
+    [1m[0mname[0m[0m        = "si3mshady/blockchain_app:1"
+    [1m[0mrepo_digest[0m[0m = "si3mshady/blockchain_app@sha256:ced0c0ebb45b4f8dd5e3941ede7c173b1886115adaa7094983fec33c98ea2117"
+}[0m[0m
