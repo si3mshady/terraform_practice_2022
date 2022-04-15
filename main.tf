@@ -16,26 +16,26 @@ resource "null_resource" "testDirectory" {
 }
 
 resource "docker_image" "blockchain_image" {
-  name = var.container_image
+  name = lookup(var.deployment_image,  var.env)
 }
 
 resource "docker_container" "blockchain_container" {
-  count = var.container_count
+  count = local.container_count
   name = join("-",["blockchain_container", random_string.var[count.index].result])
   image = docker_image.blockchain_image.latest
   ports {
       internal = 80
-      external = var.ext_port + count.index
+      external = var.ext_port_list[count.index]
  }
 
  volumes {
      container_path = "/app"
-     host_path = "/Users/si3mshady/terraform2022/docker_lesson/elliotts_blockchain_volume"
+     host_path = "${path.cwd}/elliotts_blockchain_volume"
  }
 }
 
 resource "random_string" "var" {
-    count = var.container_count
+    count = local.container_count
     length = 5
     special = false
   
