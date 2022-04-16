@@ -1,17 +1,3 @@
-  114  terraform state list
-  115  terraform show
-  116  terraform show > terraform_show_output.txt
-  117  terraform state list > terraform_state_list_output.txt
-  120  terraform show
-  122  terraform apply --auto-approve
-  123  terraform destroy
-  125  terraform apply --auto-approve
-  126  terraform apply --auto-approve
-  128  terraform apply --auto-approve
-  130  terraform apply --auto-approve
-  131  terraform apply --auto-approve
-  133  terraform apply --auto-approve
-  135  terraform apply --auto-approve
   136  terraform output
   138  terraform output
   139  terraform list show
@@ -235,3 +221,18 @@
   610  terraform destroy --auto-approve
   611  history | grep -i terraform  > tf_command_history.txt
   612  history | grep -i terraform > tf_command_history.txt 
+  619  terraform plan
+  620  terraform plan
+  621  terraform plan
+  622  terraform plan
+  623  terraform plan
+  624  terraform plan
+  625  terraform plan
+  626  terraform console
+  627  terraform apply --auto-approve
+  628  terraform console
+  629  terraform plan
+  630  terraform plan
+  631  terraform plan
+  632  terraform apply --auto-approve
+  635  history | grep -i terraform > tf_command_history.txt 
