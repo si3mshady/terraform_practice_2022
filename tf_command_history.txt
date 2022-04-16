@@ -1,17 +1,3 @@
-   92  brew install terraform
-   93  terraform init
-   94  terraform init
-   95  terraform apply 
-   96  terraform plan
-   97  terraform apply
-   98  terraform apply
-  101  terraform apply
-  103  terraform apply
-  105  terraform apply
-  108  terraform show
-  109  terraform state show
-  110  terraform state 
-  112  terraform state list
   114  terraform state list
   115  terraform show
   116  terraform show > terraform_show_output.txt
@@ -205,3 +191,47 @@
   546  terraform apply --auto-approve
   547  terraform destroy --auto-approve
   549  history | grep -i terraform  > tf_command_history.txt
+  550  terraform plan
+  551  terraform plan
+  554  terraform init
+  555  terraform plan
+  556  terraform plan
+  557  terraform apply --auto-approve
+  558  terraform destroy --auto-approve
+  567  terraform plan
+  568  terraform init
+  569  terraform plan
+  570  terraform plan
+  571  terraform plan
+  572  terraform plan
+  573  terraform plan | grep output
+  574  terraform plan | grep external
+  575  terraform destroy --auto-approve
+  576  terraform validate
+  577  terraform plan
+  578  terraform graph
+  580  terraform plan
+  582  terraform plan
+  583  terraform plan
+  584  terraform plan --auto-approve
+  585  terraform apply  --auto-approve
+  587  terraform apply  --auto-approve
+  588  terraform apply  --auto-approve
+  589  terraform apply  --auto-approve
+  590  terraform apply  --auto-approve
+  593  terraform plan
+  595  terraform init
+  596  terraform plan
+  600  terraform plan
+  601  terraform init
+  602  terraform plan
+  603  terraform plan
+  604  terraform plan
+  605  terraform plan
+  606  terraform apply --auto-approve
+  607  terraform destroy --auto-approve
+  608  terraform apply --auto-approve
+  609  terraform destroy 
+  610  terraform destroy --auto-approve
+  611  history | grep -i terraform  > tf_command_history.txt
+  612  history | grep -i terraform > tf_command_history.txt 
