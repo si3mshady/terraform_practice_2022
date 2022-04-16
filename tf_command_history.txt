@@ -1,0 +1,207 @@
+   92  brew install terraform
+   93  terraform init
+   94  terraform init
+   95  terraform apply 
+   96  terraform plan
+   97  terraform apply
+   98  terraform apply
+  101  terraform apply
+  103  terraform apply
+  105  terraform apply
+  108  terraform show
+  109  terraform state show
+  110  terraform state 
+  112  terraform state list
+  114  terraform state list
+  115  terraform show
+  116  terraform show > terraform_show_output.txt
+  117  terraform state list > terraform_state_list_output.txt
+  120  terraform show
+  122  terraform apply --auto-approve
+  123  terraform destroy
+  125  terraform apply --auto-approve
+  126  terraform apply --auto-approve
+  128  terraform apply --auto-approve
+  130  terraform apply --auto-approve
+  131  terraform apply --auto-approve
+  133  terraform apply --auto-approve
+  135  terraform apply --auto-approve
+  136  terraform output
+  138  terraform output
+  139  terraform list show
+  140  terraform show
+  142  terraform show
+  143  terraform list show
+  144  terraform output
+  145  terraform apply --auto-approve
+  147  terraform apply --auto-approve
+  148  terraform apply --auto-approve
+  149  terraform apply --auto-approve
+  151  terraform apply --auto-approve
+  152  terraform show
+  154  terraform show
+  155  terraform apply --auto-approve
+  157  terraform apply --auto-approve
+  159  terraform apply --auto-approve
+  161  terraform apply --auto-approve
+  162  terraform apply --auto-approve
+  164  terraform apply --auto-approve
+  166  terraform apply --auto-approve
+  167  terraform apply --auto-approve
+  169  terraform apply --auto-approve
+  171  terraform apply --auto-approve
+  172  terraform apply --auto-approve
+  173  terraform apply --auto-approve
+  174  terraform destroy
+  176  terraform apply --auto-approve
+  178  terraform apply --auto-approve
+  179  terraform apply destroy
+  180  terraform  destroy
+  181  terraform apply --auto-approve
+  182  terraform apply --auto-approve
+  184  terraform apply --auto-approve
+  185  terraform apply --auto-approve
+  187  terraform destroy
+  188  terraform init
+  189  terraform apply --auto-approve
+  191  terraform apply --auto-approve
+  192  terraform init
+  193  terraform apply --auto-approve
+  194  terraform apply --auto-approve
+  204  echo "# terraform_practice_2020" >> README.md
+  209  git remote add origin https://github.com/si3mshady/terraform_practice_2020.git
+  212  git remote add origin https://github.com/si3mshady/terraform_practice_2020.git
+  221  echo "# terraform_practice_2020" >> README.md
+  226  git remote add origin https://github.com/si3mshady/terraform_practice_2020.git
+  234  echo "# terraform_practice_2022" >> README.md
+  239  git remote add origin https://github.com/si3mshady/terraform_practice_2022.git
+  244  terraform apply --auto-approve
+  245  terraform destroy
+  246  terraform destroy --force
+  247  terraform destroy -force
+  248  terraform apply --auto-approve
+  249  terraform apply --auto-approve
+  250  terraform apply --auto-approve
+  251  terraform apply --auto-approve
+  252  terraform apply --auto-approve
+  253  terraform apply --auto-approve
+  254  terraform apply --auto-approve
+  255  terraform apply --auto-approve
+  256  terraform apply --auto-approve
+  257  terraform apply --auto-approve
+  258  terraform apply --auto-approve
+  259  terraform apply --auto-approve
+  260  terraform apply --auto-approve
+  261  terraform apply --auto-approve
+  262  terraform apply --auto-approve
+  263  terraform apply --auto-approve
+  271  terraform destroy
+  274  terraform destroy
+  278  terraform destroy
+  279  terraform destroy
+  280  terraform apply --auto-approve
+  281  terraform apply --auto-approve
+  282  terraform apply --auto-approve
+  283  terraform apply --auto-approve
+  284  terraform apply --auto-approve
+  288  terraform destroy
+  289  terraform destroy
+  290  terraform destroy
+  291  terraform apply --auto-approve
+  294  terraform destroy
+  295  terraform apply --auto-approve
+  296  terraform apply --auto-approve
+  297  terraform destroy
+  298  terraform apply --auto-approve
+  299  terraform destroy
+  300  terraform apply --auto-approve
+  301  terraform destroy
+  302  terraform destroy
+  303  terraform destroy
+  304  terraform destroy
+  305  terraform apply --auto-approve
+  306  terraform destroy
+  307  terraform destroy
+  308  terraform destroy
+  309  terraform destroy
+  310  terraform destroy
+  311  terraform apply --auto-approve
+  312  terraform apply --auto-approve
+  313  terraform destroy
+  314  terraform apply --auto-approve
+  315  terraform destroypwd
+  317  terraform apply --auto-approve
+  318  terraform init
+  319  terraform apply --auto-approve
+  324  terraform destroy
+  325  terraform destory
+  326  terraform destroy
+  328  terraform destroy
+  329  terraform apply --auto-approve
+  330  terraform apply --auto-approve
+  331  terraform apply --auto-approve
+  332  terraform plan
+  333  terraform plan
+  335  terraform plan
+  336  terraform plan
+  339  terraform console
+  340  terraform plan
+  341  terraform console
+  343  terraform console
+  345  terraform plan
+  347  terraform destroy
+  348  terraform console
+  349  terraform console
+  350  terraform console
+  351  terraform console
+  352  terraform console
+  353  terraform console
+  355  terraform console
+  356  terraform destroy
+  357  terraform plan
+  358  terraform plan
+  359  terraform plan
+  502  terraform plan
+  503  terraform plan --auto-approve
+  504  terraform plan --auto-approve
+  505  terraform apply --auto-approve
+  506  terraformm destoy --auto-approve
+  507  terraformm destroy --auto-approve
+  508  terraform destroy --auto-approve
+  509  terraform destroy --auto-approve
+  510  terraform destroy --auto-approve
+  511  terraform destroy --auto-approve
+  513  terraform destroy --auto-approve
+  514  terraform destroy --auto-approve
+  515  terraform plan -var="env=prod" | grep port
+  516  terraform plan -var="env=prod" | grep external
+  517  terraform plan -var="env=dev" | grep external
+  518  terraform plan -var="env=dev" | grep external
+  519  terraform plan -var="env=prod" | grep external
+  520  terraform workspace dev
+  521  terraform workspace new  dev
+  522  terraform workspace new prod
+  523  terraform workspace list
+  525  history | grep -i terraform  > tf_command_history.txt
+  527  terraform workspace select dev
+  528  terraform apply --auto-approve -var="env=dev"
+  529  history | grep -i terraform  > tf_command_history.txt
+  530  terraform workspace select prod
+  531  terraform apply --auto-approve -var="env=prod"
+  532* [Aterraform apply --auto-approve -var="env=prod"
+  533  terraform apply --auto-approve -var="env=prod"
+  534  terraform apply --auto-approve -var="env=prod"
+  535  terraform workspace show
+  536  terraform apply --auto-approve
+  537  terraform workspace select dev
+  538  terraform apply --auto-approve
+  539  terraform select dev && terraform destory --auto-approve
+  540  terraform workspace  select dev && terraform destory --auto-approve
+  541  terraform workspace  select dev && terraform destroy --auto-approve
+  542  terraform workspace  select prod  && terraform destroy --auto-approve
+  543  terraform plan
+  544  terraform plan
+  545  terraform plan
+  546  terraform apply --auto-approve
+  547  terraform destroy --auto-approve
+  549  history | grep -i terraform  > tf_command_history.txt

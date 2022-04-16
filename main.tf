@@ -1,13 +1,3 @@
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "2.16.0"
-    }
-  }
-}
-
-provider "docker" {}
 
 resource "null_resource" "testDirectory" {
   provisioner "local-exec" {
@@ -15,17 +5,21 @@ resource "null_resource" "testDirectory" {
   }
 }
 
-resource "docker_image" "blockchain_image" {
-  name = lookup(var.deployment_image,  var.env)
+
+module "docker_image" {
+  source = "./image_module"
 }
+# resource "docker_image" "blockchain_image" {
+  # name = var.deployment_image[terraform.workspace]
+# }
 
 resource "docker_container" "blockchain_container" {
   count = local.container_count
-  name = join("-",["blockchain_container", random_string.var[count.index].result])
-  image = docker_image.blockchain_image.latest
+  name = join("-",["blockchain_container", terraform.workspace, random_string.var[count.index].result])
+  image = module.image_module.docker_image_output
   ports {
       internal = 80
-      external = var.ext_port_list[count.index]
+      external = var.ext_port_mapping[terraform.workspace][count.index]
  }
 
  volumes {
