@@ -9,17 +9,19 @@ locals {
 
   deployment = {
     blockchain = {
-      image          = var.deployment_image["blockchain"][terraform.workspace]
-      internal       = 3000
-      external       = var.ext_port_mapping["blockchain"][terraform.workspace][0]
-      container_path = "/app"
+      container_count = length(var.ext_port_mapping["blockchain"][terraform.workspace])
+      image           = var.deployment_image["blockchain"][terraform.workspace]
+      internal        = 3000
+      external        = var.ext_port_mapping["blockchain"][terraform.workspace]
+      container_path  = "/app"
     }
 
     nginx = {
-      image          = var.deployment_image["nginx"][terraform.workspace]
-      internal       = 80
-      external       = var.ext_port_mapping["nginx"][terraform.workspace][0]
-      container_path = "/app"
+      container_count = length(var.ext_port_mapping["nginx"][terraform.workspace])
+      image           = var.deployment_image["nginx"][terraform.workspace]
+      internal        = 80
+      external        = var.ext_port_mapping["nginx"][terraform.workspace]
+      container_path  = "/app"
     }
   }
 }
@@ -36,20 +38,18 @@ module "image" {
 # }
 
 
-
-
 module "docker_container" {
   source   = "./container_module"
   image_in = module.image["blockchain"].docker_image_output
 
-  for_each = local.deployment
-  name_in  = join("-", [each.key, terraform.workspace, random_string.var[each.key].result])
-
+  for_each        = local.deployment
+  name_in         = each.key
+  container_count = each.value.container_count
   # count             = local.container_count
   internal_port_in  = each.value.internal
   external_port_in  = each.value.external
   container_path_in = each.value.container_path
-  host_path_in      = "${path.cwd}/elliotts_blockchain_volume"
+
 
 
 }
@@ -81,9 +81,9 @@ module "docker_container" {
 #
 # }
 
-resource "random_string" "var" {
-  for_each = local.deployment
-  length   = 5
-  special  = false
-
-}
+# resource "random_string" "var" {
+#   for_each = local.deployment
+#   length   = 5
+#   special  = false
+#
+# }

@@ -1,3 +1,7 @@
+output "container_connections" {
+  value = [for x in module.docker_container[*] : x]
+}
+
 #
 # output "module_container_metadata" {
 #     value = module.docker_container[*]
