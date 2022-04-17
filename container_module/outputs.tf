@@ -19,7 +19,6 @@
 #   description = "container_name"
 # }
 
-
 output "container_connections" {
   value = { for x in docker_container.container[*] : x.name => join(":", [x.ip_address], x.ports[*]["external"]) }
 }
